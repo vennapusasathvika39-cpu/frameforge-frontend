@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import './App.css';
 
-const API = 'http://localhost:8080/api';
+const API = process.env.REACT_APP_API_URL + '/api';
 const MAX = 15;
 const fmtBytes = (b) => b < 1024*1024 ? `${(b/1024).toFixed(0)}KB` : `${(b/1024/1024).toFixed(1)}MB`;
 
